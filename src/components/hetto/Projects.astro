@@ -1,0 +1,6 @@
+---
+import Project from "../daretto/Project.astro";
+import projects from "../../../public/json/projects.json";
+---
+
+{projects.map(project => <Project {...project} />)}

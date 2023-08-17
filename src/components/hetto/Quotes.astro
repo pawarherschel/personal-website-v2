@@ -1,0 +1,6 @@
+---
+import Quote from "../daretto/Quote.astro";
+import quotes from "../../../public/json/quotes.json";
+---
+
+{quotes.map(quote => <Quote {...quote} />)}

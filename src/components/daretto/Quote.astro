@@ -1,0 +1,15 @@
+---
+export interface Props {
+  quote: string;
+  author?: string;
+  authorUrl?: string;
+  source?: string;
+  sourceUrl?: string;
+}
+
+let { quote, author, authorUrl, source, sourceUrl } = Astro.props;
+---
+
+<p>{quote}</p>
+<a href={authorUrl}>{author}</a>
+<a href={sourceUrl}>{source}</a>

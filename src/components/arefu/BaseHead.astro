@@ -1,0 +1,26 @@
+---
+import { SEO } from "astro-seo";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<SEO
+  title={title}
+  description={description}
+  charset="utf-8"
+  extend={{
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "sitemap", type: "application/xml", href: "/sitemap-index.xml" },
+    ],
+    meta: [
+      { name: "viewport", content: "width=device-width" },
+      { name: "generator", content: Astro.generator },
+    ],
+  }}
+/>

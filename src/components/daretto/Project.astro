@@ -1,0 +1,40 @@
+---
+export interface Props {
+  name: string;
+  displayName: string;
+  link?: string;
+  description: string;
+  languages: string[];
+  corePackages?: string[];
+  license?: string;
+  keyFocuses?: string[];
+  deployedLink?: string;
+}
+
+const {
+  name,
+  displayName,
+  link,
+  description,
+  languages,
+  corePackages,
+  license,
+  keyFocuses,
+  deployedLink,
+} = Astro.props;
+---
+
+<a href={link}>{displayName}</a>
+<p>{name}</p>
+<p>{description}</p>
+<ul>
+  {languages.map(language => <li>{language}</li>)}
+</ul>
+<ul>
+  {!!corePackages && corePackages.map(corePackage => <li>{corePackage}</li>)}
+</ul>
+<p>{license}</p>
+<ol>
+  {!!keyFocuses && keyFocuses.map(keyFocus => <li>{keyFocus}</li>)}
+</ol>
+{deployedLink && <a href={deployedLink}>Check it out here!</a>}

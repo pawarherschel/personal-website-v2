@@ -1,0 +1,13 @@
+---
+export interface Props {
+  msg?: string;
+}
+
+let { msg } = Astro.props;
+---
+
+<br />
+<code>
+  todo!({!!msg && '"' + msg + '"'});
+</code>
+<br />
