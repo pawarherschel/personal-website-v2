@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/arefu/BaseHead.astro";
+import Navbar from "../components/arefu/Navbar.astro";
 // @ts-ignore: ts(2440)
 import Projects from "../components/hetto/Projects.astro";
 ---
@@ -11,7 +12,10 @@ import Projects from "../components/hetto/Projects.astro";
       description="A list of projects I've worked on"
     />
   </head>
-  <body>
-    <Projects />
+  <body transition:animate="morph">
+    <Navbar />
+    <div transition:animate="slide">
+      <Projects />
+    </div>
   </body>
 </html>

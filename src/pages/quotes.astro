@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/arefu/BaseHead.astro";
+import Navbar from "../components/arefu/Navbar.astro";
 // @ts-ignore: ts(2440)
 import Quotes from "../components/hetto/Quotes.astro";
 ---
@@ -8,7 +9,10 @@ import Quotes from "../components/hetto/Quotes.astro";
   <head>
     <BaseHead title="Quotes" description="A collection of quotes that I like" />
   </head>
-  <body>
-    <Quotes />
+  <body transition:animate="morph">
+    <Navbar />
+    <div transition:animate="slide">
+      <Quotes />
+    </div>
   </body>
 </html>

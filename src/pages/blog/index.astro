@@ -1,6 +1,8 @@
 ---
 // @ts-ignore
 import { getCollection, getEntry } from "astro:content";
+import Navbar from "../../components/arefu/Navbar.astro";
+import BaseHead from "../../components/arefu/BaseHead.astro";
 
 // Get all entries from a collection.
 // Requires the name of the collection as an argument.
@@ -11,17 +13,22 @@ console.log(allBlogPosts);
 ---
 
 <html>
-  <body>
-    <h1>Blog Posts</h1>
-
-    <ul>
-      {
-        allBlogPosts.map(post => (
-          <li>
-            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+  <head>
+    <BaseHead title="Blog Posts" description="A list of all blog posts." />
+  </head>
+  <body transition:animate="morph">
+    <Navbar />
+    <div transition:animate="slide">
+      <h1>Blog Posts</h1>
+      <ul>
+        {
+          allBlogPosts.map(post => (
+            <li>
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </body>
 </html>

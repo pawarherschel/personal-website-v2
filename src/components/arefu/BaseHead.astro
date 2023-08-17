@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -24,3 +25,4 @@ const { title, description } = Astro.props;
     ],
   }}
 />
+<ViewTransitions />

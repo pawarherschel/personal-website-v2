@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/arefu/BaseHead.astro";
+import Navbar from "../components/arefu/Navbar.astro";
 
 interface Json {
   name: string;
@@ -28,7 +29,9 @@ const extend_links = jsons
       extend_links.map(link => <link href={link.href} type={link.type} title={link.title} />)
     }
   </head>
-  <body>
+  <body transition:animate="morph">
+    <Navbar />
+    <div transition:animate="slide">
     {
       jsons
         .map(json =>
@@ -38,5 +41,5 @@ const extend_links = jsons
           <br />
         )
     }
-  </body>
+  </div> </body>
 </html>

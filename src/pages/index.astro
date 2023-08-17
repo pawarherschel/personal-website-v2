@@ -18,28 +18,30 @@ const allBlogPosts = await getCollection("blog");
     <BaseHead title="Home Page" description="The home page for my site" />
   </head>
 
-  <body>
+  <body transition:animate="morph">
     <Navbar />
-    <br />
-    {
-      allBlogPosts.map(post => (
-        <div>
-          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-          <p>{post.body}</p>
-        </div>
-      ))
-    }
-    <br />
-    <Hero />
-    <br />
-    <a href="/quotes">Quotes</a>
-    <Quotes />
-    <br />
-    <AboutMe />
-    <br />
-    <a href="/projects">Projects</a>
-    <Projects />
-    <br />
-    <ContactMe />
+    <div transition:animate="slide">
+      <br />
+      {
+        allBlogPosts.map(post => (
+          <div>
+            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            <p>{post.body}</p>
+          </div>
+        ))
+      }
+      <br />
+      <Hero />
+      <br />
+      <a href="/quotes">Quotes</a>
+      <Quotes />
+      <br />
+      <AboutMe />
+      <br />
+      <a href="/projects">Projects</a>
+      <Projects />
+      <br />
+      <ContactMe />
+    </div>
   </body>
 </html>

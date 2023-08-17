@@ -1,5 +1,19 @@
 ---
+import BaseHead from "../components/arefu/BaseHead.astro";
+import Navbar from "../components/arefu/Navbar.astro";
 export const prerender = true;
 ---
 
-<img src="/img/im_dwowning.webp" alt="404" />
+<html lang="en">
+  <head>
+    <BaseHead title="404" description="404" />
+  </head>
+  <body transition:animate="morph">
+    <Navbar />
+    <div transition:animate="slide">
+      <h1>Error 404</h1>
+      <p>Page not found</p>
+      <img src="/img/im_dwowning.webp" alt="404" />
+    </div>
+  </body>
+</html>
