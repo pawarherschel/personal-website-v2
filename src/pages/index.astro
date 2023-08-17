@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/arefu/BaseHead.astro";
+
+import Hero from "../components/hetto/Intro.astro";
+import Quotes from "../components/hetto/Quotes.astro";
+import AboutMe from "../components/hetto/AboutMe.astro";
+import Projects from "../components/hetto/Projects.astro";
+import ContactMe from "../components/hetto/ContactMe.astro";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title="Home Page" description="The home page for my site" />
+  </head>
+
+  <body>
+    <Hero />
+    <br />
+    <a href="/quotes">Quotes</a>
+    <Quotes />
+    <br />
+    <AboutMe />
+    <br />
+    <a href="/projects">Projects</a>
+    <Projects />
+    <br />
+    <ContactMe />
+  </body>
+</html>

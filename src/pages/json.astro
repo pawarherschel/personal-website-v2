@@ -1,0 +1,42 @@
+---
+import BaseHead from "../components/arefu/BaseHead.astro";
+
+interface Json {
+  name: string;
+  displayName: string;
+  description: string;
+}
+
+const jsons: Json[] = [
+  {name:"projects", displayName:"Projects", description:"A list of projects I've worked on"},
+  {name:"quotes", displayName:"Quotes", description:"A collection of quotes that I like"},
+];
+
+const extend_links = jsons
+  .map(json => [
+    {href: `/json/${json.name}.json`, type: "application/json", title: `${json.displayName}`},
+    {href: `/json/${json.name}-schema.json`, type: "application/schema+json", title: `${json.displayName} Schema`}
+  ])
+  .flat();
+
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title="JSON" description="Links to all the json data files" />
+    {
+      extend_links.map(link => <link href={link.href} type={link.type} title={link.title} />)
+    }
+  </head>
+  <body>
+    {
+      jsons
+        .map(json =>
+          <a href=`/json/${json.name}.json` >{json.displayName}</a>
+          <p>{json.description}</p>
+          <a href=`/json/${json.name}-schema.json` >{json.displayName} Schema</a>
+          <br />
+        )
+    }
+  </body>
+</html>
