@@ -1,0 +1,184 @@
+[
+  {
+    "name":"test_name",
+    "displayName":"test display name",
+    "link":"test link",
+    "description":"test description",
+    "languages":["test lang 1", "test lang 2"],
+    "corePackages":["test core package 1", "test core package 2"],
+    "license":"test license",
+    "keyFocuses": [
+      "test focus 1",
+      "test focus 2",
+      "test focus 3"
+    ],
+    "deployedLink":"test deployed link"
+  },
+  {
+    "name":"test_name2",
+    "displayName":"test display name2",
+    "description":"test description2",
+    "languages":["test lang 1"]
+  },
+  {
+    "name":"booth_archiver",
+    "displayName":"Booth Archiver",
+    "link":"https://github.com/pawarherschel/booth_archiver",
+    "description":"A simple CLI tool to archive the contents of your booth wishlist",
+    "languages":["rust"],
+    "license":"GPL-3.0 license",
+    "keyFocuses": [
+      "simple web scraping", 
+      "get data from responses",
+      "turn into intermediate in-memory format",
+      "convert to excel spreadsheet",
+      "apply filters to spreadsheet",
+      "write markdown files for description",
+      "download images for each item"
+    ]
+  },
+  {
+    "name":"vrcx-insights",
+    "displayName":"VRCX Insights",
+    "link":"https://github.com/pawarherschel/vrcx-insights",
+    "description":"A simple tool to get insights into your VRChat friends",
+    "languages":["rust", "SurrealQL"],
+    "corePackages":[],
+    "license":"GPL-3.0 license"
+  },
+  {
+    "name":"GMTK2023",
+    "displayName":"Cosmos Conquerors",
+    "link":"https://github.com/pawarherschel/GMTK2023",
+    "description":"A game made for the GMTK Game Jam 2023, the theme was 'Roles Reverse'. This is a simple game where the roles from the game Space Invaders are reversed.",
+    "languages":["GDScript"],
+    "license":"MIT license",
+    "keyFocuses": [
+      "You control the mob of invaders",
+      "The hero tries to kill a random invader",
+      "Press spacebar to shoot 1 bullet randomly from the mob",
+      "Number of invaders carry over"
+    ],
+    "deployedLink":"https://pawarherschel.itch.io/cosmos-conquerors"
+  },
+  {
+    "name":"surrealdb-test",
+    "displayName":"SurrealDB Test",
+    "link":"https://github.com/pawarherschel/surrealdb-test",
+    "description":"A simple test project to test out the SurrealDB database",
+    "languages":["rust", "SurrealQL"],
+    "corePackages":["surrealdb"],
+    "keyFocuses": [
+      "Test out SurrealDB",
+      "Test out SurrealQL"
+    ]
+  },
+  {
+    "name":"personal-website",
+    "displayName":"Personal Website",
+    "link":"https://github.com/pawarherschel/personal-website",
+    "description":"My personal website",
+    "languages":["Astro", "HTML", "CSS", "TypeScript"],
+    "corePackages":["TailwindCSS", "Astro"],
+    "deployedLink":"https://sakurakat.systems/"
+  },
+  {
+    "name":"sqlx-vrchat-sqlite-test",
+    "displayName":"SQLx VRChat SQLite Test",
+    "link":"https://github.com/pawarherschel/sqlx-vrchat-sqlite-test",
+    "description":"A simple test project to test out the SQLx crate for Rust",
+    "languages":["rust", "SQL"],
+    "corePackages":["sqlx", "tokio"],
+    "keyFocuses": [
+      "Test out SQLx crate for Rust",
+      "Use VRCX's SQLite database for testing"
+    ]
+  },
+  {
+    "name":"Project-Euler",
+    "displayName":"Project Euler Solutions",
+    "link":"https://github.com/pawarherschel/Project-Euler",
+    "description":"My solutions to Project Euler problems",
+    "languages":["rust"],
+    "keyFocuses": [
+      "Solve Project Euler problems",
+      "Learn Rust",
+      "Create any nessaary helper libraries"
+    ]
+  },
+  {
+    "name":"stock-crasher",
+    "displayName":"Stock Crasher",
+    "link":"https://github.com/SakuraKat/stock-crasher",
+    "description":"A silly cli tool to show the current price of a stock in vrchat using OSC",
+    "languages":["python"],
+    "corePackages":["yfinance", "python-osc"],
+    "keyFocuses": [
+      "Get stock price from Yahoo Finance",
+      "Send OSC message to VRChat"
+    ]
+  },
+  {
+    "name":"JumpCat",
+    "displayName":"Jump Cat",
+    "link":"https://github.com/SakuraKat/JumpCat",
+    "description":"Chrome's dino game made in Godot using Pusheen for assets",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"MemeInvaders",
+    "displayName":"Meme Invaders",
+    "link":"https://github.com/SakuraKat/MemeInvaders",
+    "description":"space invaders but terrible, made in Godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"MazeGeneration",
+    "displayName":"Maze Generation",
+    "link":"https://github.com/SakuraKat/MazeGeneration",
+    "description":"maze generation using godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"PopTheLock",
+    "displayName":"Pop The Lock",
+    "link":"https://github.com/SakuraKat/PopTheLock",
+    "description":"Pop the lock game made in Godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"MagicalMarshmellow",
+    "displayName":"Magical Marshmellow",
+    "link":"https://github.com/SakuraKat/MagicalMarshmellow",
+    "description":"flappy bird but shittier made in Godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"GameOfLife",
+    "displayName":"Game Of Life",
+    "link":"https://github.com/SakuraKat/GameOfLife",
+    "description":"Conway's Game of Life made in Godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"Minesweeper",
+    "displayName":"Minesweeper",
+    "link":"https://github.com/SakuraKat/Minesweeper",
+    "description":"Minesweeper using godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"Pong",
+    "displayName":"Pong",
+    "link":"https://github.com/SakuraKat/Pong",
+    "description":"Pong using godot",
+    "languages":["GDScript"]
+  },
+  {
+    "name":"Snake",
+    "displayName":"Snake",
+    "link":"https://github.com/SakuraKat/Snake",
+    "description":"Snake made in Godot",
+    "languages":["GDScript"]
+  }
+]

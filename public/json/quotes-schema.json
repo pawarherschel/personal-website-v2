@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "quote": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "authorUrl": {
+        "type": "string"
+      },
+      "source": {
+        "type": "string"
+      },
+      "sourceUrl": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "quote"
+    ]
+  }
+}

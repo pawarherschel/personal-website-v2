@@ -1,0 +1,19 @@
+[
+  {
+    "quote":"test quote",
+    "author":"test author",
+    "authorUrl":"test author url",
+    "source":"test source",
+    "sourceUrl":"test source url"
+  },
+  {
+    "quote":"test quote 2"
+  },
+  {
+    "quote":"In this life and the next, for however long our souls remain, mine will always find yours",
+    "author":"Chloe Gong",
+    "authorUrl":"https://thechloegong.com",
+    "source":"Our Violent Ends",
+    "sourceUrl":"https://thechloegong.com/ove/"
+  }
+]
