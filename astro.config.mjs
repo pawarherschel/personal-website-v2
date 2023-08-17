@@ -10,7 +10,7 @@ export default defineConfig({
   experimental: {
     viewTransitions: true
   },
-  site: "https://sakurakat.systems",
+  site: "https://v2.sakurakat.systems",
   integrations: [sitemap(), robotsTxt({
     sitemap: true
   }), mdx()],
