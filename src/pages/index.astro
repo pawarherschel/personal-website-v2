@@ -6,6 +6,10 @@ import Quotes from "../components/hetto/Quotes.astro";
 import AboutMe from "../components/hetto/AboutMe.astro";
 import Projects from "../components/hetto/Projects.astro";
 import ContactMe from "../components/hetto/ContactMe.astro";
+
+import { getCollection } from "astro:content";
+
+const allBlogPosts = await getCollection("blog");
 ---
 
 <html lang="en">
@@ -14,6 +18,16 @@ import ContactMe from "../components/hetto/ContactMe.astro";
   </head>
 
   <body>
+    <br />
+    {
+      allBlogPosts.map(post => (
+        <div>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          <p>{post.body}</p>
+        </div>
+      ))
+    }
+    <br />
     <Hero />
     <br />
     <a href="/quotes">Quotes</a>
