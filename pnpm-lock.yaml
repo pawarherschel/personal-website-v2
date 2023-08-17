@@ -17,9 +17,6 @@ devDependencies:
   astro-seo:
     specifier: ^0.7.5
     version: 0.7.5
-  jsonschema:
-    specifier: ^1.4.1
-    version: 1.4.1
 
 packages:
 
@@ -1926,10 +1923,6 @@ packages:
 
   /jsonc-parser@3.2.0:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
-    dev: true
-
-  /jsonschema@1.4.1:
-    resolution: {integrity: sha512-S6cATIPVv1z0IlxdN+zUk5EPjkGCdnhN4wVSBlvoUO1tOLJootbo9CquNJmbIh4yikWHiUedhRYrNPn1arpEmQ==}
     dev: true
 
   /kind-of@6.0.3:
