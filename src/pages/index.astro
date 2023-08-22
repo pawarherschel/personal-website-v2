@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/arefu/BaseHead.astro";
 
-import Hero from "../components/hetto/Intro.astro";
+import Intro from "../components/hetto/Intro.astro";
 import Quotes from "../components/hetto/Quotes.astro";
 import AboutMe from "../components/hetto/AboutMe.astro";
 import Projects from "../components/hetto/Projects.astro";
@@ -21,17 +21,7 @@ const allBlogPosts = await getCollection("blog");
   <body transition:animate="morph">
     <Navbar />
     <div transition:animate="slide">
-      <br />
-      {
-        allBlogPosts.map(post => (
-          <div>
-            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            <p>{post.body}</p>
-          </div>
-        ))
-      }
-      <br />
-      <Hero />
+      <Intro />
       <br />
       <a href="/quotes">Quotes</a>
       <Quotes />
@@ -42,6 +32,16 @@ const allBlogPosts = await getCollection("blog");
       <Projects />
       <br />
       <ContactMe />
+      <br />
+      {
+        allBlogPosts.map(post => (
+          <div>
+            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            <p>{post.body}</p>
+          </div>
+        ))
+      }
+      <br />
     </div>
   </body>
 </html>

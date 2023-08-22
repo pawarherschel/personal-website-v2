@@ -1,4 +1,5 @@
 ---
+import Todo from "../arefu/Todo.astro";
 export interface Props {
   name: string;
   displayName: string;
@@ -24,17 +25,62 @@ const {
 } = Astro.props;
 ---
 
-<a href={link}>{displayName}</a>
-<p>{name}</p>
-<p>{description}</p>
-<ul>
-  {languages.map(language => <li>{language}</li>)}
-</ul>
-<ul>
-  {!!corePackages && corePackages.map(corePackage => <li>{corePackage}</li>)}
-</ul>
-<p>{license}</p>
-<ol>
-  {!!keyFocuses && keyFocuses.map(keyFocus => <li>{keyFocus}</li>)}
-</ol>
-{deployedLink && <a href={deployedLink}>Check it out here!</a>}
+<div class="card bg-base-100 shadow-xl max-w-md">
+  <div class="card-body">
+    <h2 class="card-title">
+      {displayName}
+      <div class="indicator">
+        <button class="btn btn-secondary">
+          {
+            !!license && (
+              <span class="badge badge-primary indicator-item">{license}</span>
+            )
+          }
+          <a href={link} class="link link-hover">{name}</a>
+        </button>
+      </div>
+    </h2>
+  </div>
+  <p class=""><Todo msg="Add classes for description" />{description}</p>
+  <div class="overflow-x-auto">
+    <table class="table">
+      <tbody>
+        {
+          !!keyFocuses &&
+            keyFocuses.map((keyFocus, idx) => (
+              <tr class="hover">
+                <td>{idx + 1}</td>
+                <td>{keyFocus}</td>
+              </tr>
+            ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="flex justify-items-stretch">
+    {
+      !!deployedLink && (
+        <a href={deployedLink} class="badge badge-accent">
+          Check it out here!
+        </a>
+      )
+    }
+    <div class="join join-vertical lg:join-horizontal flex-1 justify-end">
+      {
+        languages.map(language => (
+          <div class="badge badge-primary badge-outline join-item">
+            {language}
+          </div>
+        ))
+      }
+      {
+        !!corePackages &&
+          corePackages.map(corePackage => (
+            <div class="badge badge-secondary badge-outline join-item">
+              {corePackage}
+            </div>
+          ))
+      }
+    </div>
+  </div>
+</div>

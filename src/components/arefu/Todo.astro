@@ -7,7 +7,9 @@ let { msg } = Astro.props;
 ---
 
 <br />
-<code>
-  todo!({!!msg && '"' + msg + '"'});
-</code>
+<p class="">
+  <button class="btn !btn-error no-animation !btn-active" disabled="disabled">
+    todo!({!!msg && '"' + msg + '"'});
+  </button>
+</p>
 <br />

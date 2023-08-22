@@ -25,7 +25,7 @@
     "displayName":"Booth Archiver",
     "link":"https://github.com/pawarherschel/booth_archiver",
     "description":"A simple CLI tool to archive the contents of your booth wishlist",
-    "languages":["rust"],
+    "languages":["Rust"],
     "license":"GPL-3.0 license",
     "keyFocuses": [
       "simple web scraping", 
@@ -42,7 +42,7 @@
     "displayName":"VRCX Insights",
     "link":"https://github.com/pawarherschel/vrcx-insights",
     "description":"A simple tool to get insights into your VRChat friends",
-    "languages":["rust", "SurrealQL"],
+    "languages":["Rust", "SurrealQL"],
     "corePackages":[],
     "license":"GPL-3.0 license"
   },
@@ -66,7 +66,7 @@
     "displayName":"SurrealDB Test",
     "link":"https://github.com/pawarherschel/surrealdb-test",
     "description":"A simple test project to test out the SurrealDB database",
-    "languages":["rust", "SurrealQL"],
+    "languages":["Rust", "SurrealQL"],
     "corePackages":["surrealdb"],
     "keyFocuses": [
       "Test out SurrealDB",
@@ -78,8 +78,7 @@
     "displayName":"Personal Website",
     "link":"https://github.com/pawarherschel/personal-website",
     "description":"My personal website",
-    "languages":["Astro", "HTML", "CSS", "TypeScript"],
-    "corePackages":["TailwindCSS", "Astro"],
+    "languages":["Astro", "TailwindCSS", "TypeScript"],
     "deployedLink":"https://sakurakat.systems/"
   },
   {
@@ -87,7 +86,7 @@
     "displayName":"SQLx VRChat SQLite Test",
     "link":"https://github.com/pawarherschel/sqlx-vrchat-sqlite-test",
     "description":"A simple test project to test out the SQLx crate for Rust",
-    "languages":["rust", "SQL"],
+    "languages":["Rust", "SQL"],
     "corePackages":["sqlx", "tokio"],
     "keyFocuses": [
       "Test out SQLx crate for Rust",
@@ -99,7 +98,7 @@
     "displayName":"Project Euler Solutions",
     "link":"https://github.com/pawarherschel/Project-Euler",
     "description":"My solutions to Project Euler problems",
-    "languages":["rust"],
+    "languages":["Rust"],
     "keyFocuses": [
       "Solve Project Euler problems",
       "Learn Rust",
@@ -111,7 +110,7 @@
     "displayName":"Stock Crasher",
     "link":"https://github.com/SakuraKat/stock-crasher",
     "description":"A silly cli tool to show the current price of a stock in vrchat using OSC",
-    "languages":["python"],
+    "languages":["Python"],
     "corePackages":["yfinance", "python-osc"],
     "keyFocuses": [
       "Get stock price from Yahoo Finance",

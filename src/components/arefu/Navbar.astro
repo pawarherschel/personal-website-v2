@@ -1,10 +1,19 @@
 ---
+import Todo from "./Todo.astro";
 ---
 
-<nav>
-  <ul>
-    <a href="/"><li>Home</li></a>
-    <a href="/blog"><li>Blog</li></a>
-    <a href="/json"><li>JSON</li></a>
-  </ul>
-</nav>
+<div class="navbar bg-base-100 sticky top-0">
+  <div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl" href="/">Sakura Kat Systems</a>
+  </div>
+  <nav class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/json">JSON</a></li>
+    </ul>
+  </nav>
+  <Todo
+    msg="make it so the header is always in front, it goes behind when {hero, card, quote, project} and self is intersecting"
+  />
+</div>
