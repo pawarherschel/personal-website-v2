@@ -65,7 +65,28 @@ const {
         </a>
       )
     }
-    <div class="join join-vertical lg:join-horizontal flex-1 justify-end">
+    {
+      languages.length === 1 && !corePackages ? (
+        <div class="join join-vertical lg:join-horizontal flex-1 justify-end">
+          <div class="badge badge-primary badge-outline">{languages[0]}</div>
+        </div>
+      ) : (
+        <div class="join join-vertical lg:join-horizontal flex-1 justify-end">
+          {languages.map(language => (
+            <div class="badge badge-primary badge-outline join-item">
+              {language}
+            </div>
+          ))}
+          {!!corePackages &&
+            corePackages.map((corePackage: string) => (
+              <div class="badge badge-secondary badge-outline join-item">
+                {corePackage}
+              </div>
+            ))}
+        </div>
+      )
+    }
+    <!-- <div class="join join-vertical lg:join-horizontal flex-1 justify-end">
       {
         languages.map(language => (
           <div class="badge badge-primary badge-outline join-item">
@@ -81,6 +102,6 @@ const {
             </div>
           ))
       }
-    </div>
+    </div> -->
   </div>
 </div>
