@@ -34,12 +34,12 @@ const allBlogPosts = await getCollection("blog");
       <ContactMe />
       <br />
       {
-        allBlogPosts.map(post => (
+        allBlogPosts.map(post =>
           <div>
             <a href={`/blog/${post.slug}`}>{post.data.title}</a>
             <p>{post.body}</p>
           </div>
-        ))
+        )
       }
       <br />
     </div>
